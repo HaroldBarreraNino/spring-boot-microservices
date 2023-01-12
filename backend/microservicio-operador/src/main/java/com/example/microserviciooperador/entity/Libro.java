@@ -11,6 +11,8 @@ public class Libro {
     private Long idlibro;
     private String titulo;
     private String descripcion;
+
+    @Column(columnDefinition = "TEXT")
     private String imagen;
 
     public Libro() {
