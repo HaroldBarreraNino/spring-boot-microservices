@@ -1,0 +1,173 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: #007578;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  background: #005f95;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  line-height: 100px;
+  color: #fd2902;
+}
+
+nav {
+  background: #005f95;
+  height: 50px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+nav ul{
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav ul li {
+  float: left;
+  list-style: none;
+  margin: 10px;
+}
+
+h1 {
+  color: #fd2902;
+}
+
+h6 {
+  color: #fff;
+}
+
+label {
+  display: inline-block;
+  color: #f19030;
+  text-align: right;
+}
+
+li{
+  list-style-type: none;
+}
+
+footer{
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: center;
+  border: 2px solid #fff;
+}
+
+#banner {
+  width: 100%;
+  background-image: url(https://www.yorklibraries.org/wp-content/uploads/2020/02/digital-library-header.jpg);
+  height: 800px;
+  background-color: purple;
+  background-position: center;
+}
+
+#adminbanner{
+  width: 100%;
+  background-image: url(https://cdn.shopify.com/app-store/listing_images/9dfb92890d3c6c5d9c431d8072e3c5dc/banner/CPT5gb70lu8CEAE=.png);
+  height: 800px;
+  background-color: purple;
+  background-position: center;
+}
+
+#userbanner{
+  width: 100%;
+  background-image: url(https://www.tododisca.com/otium/wp-content/uploads/2022/04/peliculas-online2.jpg);
+  height: 740px;
+  background-color: purple;
+  background-position: center;
+}
+
+#titleitem{
+  color: #fd2902;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container {
+  width: 70%;
+  margin: 0px auto;
+}
+
+.container-center {
+  text-align: center;
+  margin: 0px auto;
+}
+
+.container-card{
+  width: 25%;
+  margin: 10px auto;
+  padding: 20px;
+  background: #005f95;
+  border-radius: 20%;
+}
+
+.container-offer{
+  background: #fff;
+  border-radius: 25%;
+  border: 2px solid #fd2902;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  margin: auto;
+  padding: auto;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.titlePage {
+  background: #005f95;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  line-height: 100px;
+  color: #fd2902;
+}
+
+.form {
+  border: 1px solid #f19030;
+}
+
+.form-group {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.form-control {
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #8d4eb4;
+  border-radius: 25%;
+  width: 100px;
+  height: 50px;
+}
+
+.btn-secondary {
+  background: #f19030;
+  border-radius: 25%;
+  width: 100px;
+  height: 50px;
+}
+
+.routelink {
+  background: #fff;
+  border-radius: 25%;
+  border: 2px solid #fd2902;
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  padding: auto;
+}
