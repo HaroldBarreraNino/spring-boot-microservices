@@ -8,7 +8,7 @@ public class Libro {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idlibro;
+    private int idlibro;
     private String titulo;
     private String descripcion;
 
@@ -18,18 +18,18 @@ public class Libro {
     public Libro() {
     }
 
-    public Libro(Long idlibro, String titulo, String descripcion, String imagen) {
+    public Libro(int idlibro, String titulo, String descripcion, String imagen) {
         this.idlibro = idlibro;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.imagen = imagen;
     }
 
-    public Long getIdlibro() {
+    public int getIdlibro() {
         return idlibro;
     }
 
-    public void setIdlibro(Long idlibro) {
+    public void setIdlibro(int idlibro) {
         this.idlibro = idlibro;
     }
 
