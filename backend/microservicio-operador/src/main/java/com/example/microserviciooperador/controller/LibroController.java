@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class LibroController {
 
@@ -40,6 +42,15 @@ public class LibroController {
     public String eliminarLibro(Model model, @PathVariable(name = "id") Long id){
         Libro libroborrar = repositorio.findById(id).get();
         repositorio.delete(libroborrar);
+        return "index";
+    }
+
+    @GetMapping("/libros")
+    public String mostrarLibros(){
+        List<Libro> libros = (List<Libro>) repositorio.findAll();
+        for (Libro libro: libros) {
+            System.out.println(libro);
+        }
         return "index";
     }
 
