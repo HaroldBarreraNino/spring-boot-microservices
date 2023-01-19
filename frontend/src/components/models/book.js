@@ -1,12 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { LibroService } from "../../services/LibroService";
 
 //Este es un modelo de plantilla. El modelo final tendra mas atributos dependiendo de la base de datos que se desarrole
-function Book({ titulo, descripcion, imagen }) {
+function Book({ id }) {
 
-    //Hooks useStates por si a futuro se planea juntar con una base de datos, por ahora son datos estaticos
-    /*const [titulo, setTitulo] = useState(titulo);
-    const [descripcion, setDescripcion] = useState(descripcion);
-    const [imagen, setImagen] = useState(imagen);*/
+    const service = new LibroService();
+    const [titulo, setTitulo] = useState("");
+    const [descripcion, setDescripcion] = useState("");
+    const [imagen, setImagen] = useState("");
+
+    useEffect(() => {
+        const obtenerInformacion = () => {
+            service.getLibro(id).then(libro => {
+                setTitulo(libro.titulo);
+                setDescripcion(libro.descripcion);
+                setImagen(libro.imagen)
+            });
+        }
+
+        obtenerInformacion();
+
+    }, [id]);
 
     return (
         <div className="container-card">

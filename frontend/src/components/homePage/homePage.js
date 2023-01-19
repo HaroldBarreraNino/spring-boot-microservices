@@ -2,6 +2,7 @@ import Navbar from "../navbarComponent/navbar";
 import Footer from "../footerComponent/footer";
 
 const HomePage = () => {
+
     return (
         <>
             <header>
