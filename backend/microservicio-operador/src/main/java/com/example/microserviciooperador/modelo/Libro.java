@@ -1,4 +1,4 @@
-package com.example.microserviciooperador.entity;
+package com.example.microserviciooperador.modelo;
 
 import jakarta.persistence.*;
 
