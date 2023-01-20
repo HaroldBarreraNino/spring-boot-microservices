@@ -27,7 +27,6 @@ public class LibroController {
         libroeditar.setDescripcion(newlibro.getDescripcion());
         libroeditar.setImagen(newlibro.getImagen());
         service.saveLibro(libroeditar);
-        System.out.println(libroeditar);
         return "Edicion exitosa";
     }
 
