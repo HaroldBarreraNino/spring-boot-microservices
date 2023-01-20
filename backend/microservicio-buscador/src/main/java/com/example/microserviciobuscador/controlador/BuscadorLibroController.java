@@ -19,16 +19,12 @@ public class BuscadorLibroController {
     @GetMapping("/libros")
     public List<Libro> mostrarLibros(){
         List<Libro> libros = service.findAll();
-        for (Libro libro: libros) {
-            System.out.println(libro);
-        }
         return libros;
     }
 
     @GetMapping("/libro/{id}")
     public Libro mostrarLibroId(@PathVariable(name = "id") int id){
         Libro libro = service.findLibro(id);
-        System.out.println(libro);
         return libro;
     }
 
@@ -42,9 +38,6 @@ public class BuscadorLibroController {
     @PostMapping("/libro/titulo")
     public List<Libro> buscarlibrosportitulo(String titulo){
         List<Libro> librosencontrado = service.findByTitulo(titulo);
-        for (Libro libro: librosencontrado) {
-            System.out.println(libro);
-        }
         return librosencontrado;
     }
 }
