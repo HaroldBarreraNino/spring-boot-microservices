@@ -1,15 +1,16 @@
 import axios from "axios";
 
 export class LibroService{
-    baseUrl = "http://localhost:80/api/operador/"
+    buscadorUrl = "http://localhost:90/api/buscador/"
+    operadorUrl = "http://localhost:80/api/operador/"
 
     getAllLibros(){
-        return axios.get(this.baseUrl + "libros")
+        return axios.get(this.buscadorUrl + "libros")
         .then(res => res.data);
     }
 
     getLibro(id){
-        return axios.get(this.baseUrl + "libro/" + id)
+        return axios.get(this.buscadorUrl + "libro/" + id)
         .then(res => res.data);
     }
 }

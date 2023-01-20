@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/api/operador/")
 @CrossOrigin("*")
@@ -15,12 +13,6 @@ public class LibroController {
 
     @Autowired
     private IlibroService service;
-
-    @GetMapping
-    public String index(Model model, Libro libro){
-        model.addAttribute("libros", service.listarLibros());
-        return "index";
-    }
 
     @PostMapping("/crearlibro")
     public String crearLibro( Model model, Libro libro){
@@ -43,22 +35,6 @@ public class LibroController {
     public String eliminarLibro(Model model, @PathVariable(name = "id") int id){
         service.deleteLibro(id);
         return "Eliminacion exitosa";
-    }
-
-    @GetMapping("/libros")
-    public List<Libro> mostrarLibros(){
-        List<Libro> libros = service.listarLibros();
-        for (Libro libro: libros) {
-            System.out.println(libro);
-        }
-        return libros;
-    }
-
-    @GetMapping("/libro/{id}")
-    public Libro mostrarLibroId(@PathVariable(name = "id") int id){
-        Libro libro = service.listarId(id).get();
-        System.out.println(libro);
-        return libro;
     }
 
 }
